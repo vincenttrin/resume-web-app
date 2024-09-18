@@ -4,7 +4,6 @@ import {
   decrement,
   increment,
   incrementByAmount,
-  toggleDropdown,
   incrementAsync,
   incrementIfOdd,
   selectCount,
@@ -16,7 +15,7 @@ export function Counter() {
   const dispatch = useDispatch();
   const [incrementAmount, setIncrementAmount] = useState('2');
 
-  const isOpen = useSelector((state) => state.dropdown.isOpen);
+  const [open, setOpen] = useState(false);
 
   const incrementValue = Number(incrementAmount) || 0;
 
@@ -25,12 +24,11 @@ export function Counter() {
       <div className='dropdown'>
         <button 
           className='dropbtn' 
-          aria-label="Toggle dropdown"
-          onClick={() => dispatch(toggleDropdown())}
+          onClick={() => setOpen(!open)}
         >
           Dropdown 
         </button>
-        {isOpen && (
+        {open && (
               <ul className='dropdown-content'>
                 <li>Item 1</li>
                 <li>Item 2</li>
