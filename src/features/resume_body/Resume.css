@@ -1,0 +1,14 @@
+.job {
+  background-color: #f0f0f0; /* Subtle shade of grey */
+  padding: 15px;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Light shadow for depth */
+  margin-bottom: 20px;
+}
+
+.job-details {
+  display: flex;
+  justify-content: space-between;
+  align-items: center; /* Align items vertically in the center */
+  padding: 10px;
+}
