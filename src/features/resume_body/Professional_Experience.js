@@ -16,8 +16,8 @@ export function ProfessionalExperience() {
   return (
     <div className="professional-experience">
       <h2>Professional Experience</h2>
-      <div className="job">
-        <h3 onClick={() => toggleDropdown(0)} style={{ cursor: 'pointer' }}>
+      <div className="job" onClick={() => toggleDropdown(0)} style={{ cursor: 'pointer' }}>
+        <h3>
           Job Title
         </h3>
         {isOpen[0] && (
@@ -34,8 +34,8 @@ export function ProfessionalExperience() {
           </div>
         )}
       </div>
-      <div className="job">
-        <h3 onClick={() => toggleDropdown(1)} style={{ cursor: 'pointer' }}>
+      <div className="job" onClick={() => toggleDropdown(1)} style={{ cursor: 'pointer' }}>
+        <h3>
           Job Title
         </h3>
         {isOpen[1] && (
