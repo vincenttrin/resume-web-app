@@ -1,58 +1,23 @@
 import React from 'react';
 import logo from './logo.svg';
-import { ProfessionalExperience } from './features/resume_body/Professional_Experience';
+import { ProfessionalExperience } from './pages/resume/Resume.js';
 import './App.css';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import Resume from './pages/resume/Resume.js';
+import ElectricalLines from './pages/electricalLines/ElectricalLines.js';
+import NoPage from './pages/NoPage.js';
 
-function App() {
+export default function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <span>
-          <span>Learn </span>
-          <a
-            className="App-link"
-            href="https://reactjs.org/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            React
-          </a>
-          <span>, </span>
-          <a
-            className="App-link"
-            href="https://redux.js.org/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Redux
-          </a>
-          <span>, </span>
-          <a
-            className="App-link"
-            href="https://redux-toolkit.js.org/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Redux Toolkit
-          </a>
-          ,<span> and </span>
-          <a
-            className="App-link"
-            href="https://react-redux.js.org/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            React Redux
-          </a>
-        </span>
-      </header>
-      <ProfessionalExperience />
+    <div>
+      <BrowserRouter>
+        <Routes>
+          <Route index element={<Resume />} />
+          <Route path="/resume" element={<Resume />} />
+          <Route path="/electrical-lines" element={<ElectricalLines />} />
+          <Route path="*" element={<NoPage />} />
+        </Routes>
+      </BrowserRouter>
     </div>
   );
 }
-
-export default App;
