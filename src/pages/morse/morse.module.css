@@ -1,0 +1,14 @@
+.label {
+  display: block;
+  margin: 2em 1em;
+}
+
+.wide {
+  display: block;
+  width: 100%;
+}
+
+.morse {
+  letter-spacing: 0.5ex;
+  overflow-wrap: anywhere;
+}

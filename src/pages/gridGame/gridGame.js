@@ -9,6 +9,7 @@ import { useSelector, useDispatch } from 'react-redux';
 import PropTypes from 'prop-types';
 import styles from './gridGame.module.css';
 import confetti from 'canvas-confetti';
+import Header from '../../components/Header.js';
 
 import {
   goToEarlierLevel,
@@ -148,6 +149,7 @@ export default function GridGame() {
 
   return (
     <body>
+      <Header />
       <div>
         <text>Level {level + 1}</text>
       </div>

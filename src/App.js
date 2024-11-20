@@ -6,6 +6,7 @@ import Resume from './pages/resume/Resume.js';
 import ElectricalLines from './pages/electricalLines/ElectricalLines.js';
 import NoPage from './pages/NoPage.js';
 import GridGame  from './pages/gridGame/gridGame.js';
+import MessageFinder from './pages/morse/morse.js';
 
 export default function App() {
   return (
@@ -16,6 +17,7 @@ export default function App() {
           <Route path="/resume-web-app" element={<Resume />} />
           <Route path="/electrical-lines" element={<ElectricalLines />} />
           <Route path="/grid-game" element={<GridGame />} />
+          <Route path="/morse-decoder" element={<MessageFinder />} />
           <Route path="*" element={<NoPage />} />
         </Routes>
       </BrowserRouter>
