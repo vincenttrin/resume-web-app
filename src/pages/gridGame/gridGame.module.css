@@ -1,10 +1,19 @@
 /* Finish this CSS to support its React component per the assignment instructions. */
 
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
 .grid {
   aspect-ratio: 1 / 1;
   display: grid;
   margin: 1em;
   border: 1px solid rgba(0 0 0 / 100%);
+  max-height: 75vh;
 }
 
 .grid div {
@@ -12,6 +21,7 @@
   justify-content: center;
   align-content: center;
   align-items: center;
+
 }
 
 .image {
@@ -26,6 +36,7 @@
 
 .square {
   background-color: rgba(0 255 255 / 100%);
+  border-radius: 8px;
 }
 
 .buttonGroup {

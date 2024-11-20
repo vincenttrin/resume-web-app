@@ -157,10 +157,7 @@ export default function GridGame() {
         <button onClick={prevLevel}>Previous level</button>
         <button onClick={nextLevel}>Next level</button>
       </div>
-      <div className={styles.grid} style={{
-        gridTemplateColumns: `repeat(${current.width}, 1fr)`,
-        gridTemplateRows: `repeat(${current.height}, 1fr)`,
-      }}>{content}</div>
+      <div className={styles.grid}>{content}</div>
       <div>
         <div>
           <button className={styles.square} onClick={moveUp}>Up</button>
