@@ -1,0 +1,35 @@
+/* Finish this CSS to support its React component per the assignment instructions. */
+
+.grid {
+  aspect-ratio: 1 / 1;
+  display: grid;
+  margin: 1em;
+  border: 1px solid rgba(0 0 0 / 100%);
+}
+
+.grid div {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+}
+
+.image {
+  margin: 0% auto;
+  display: flex;
+}
+
+.utility {
+  display: flex;
+  justify-content: space-between;
+}
+
+.square {
+  background-color: rgba(0 255 255 / 100%);
+}
+
+.buttonGroup {
+  display: flex;
+  justify-content: space-evenly;
+  margin: 1%;
+}
