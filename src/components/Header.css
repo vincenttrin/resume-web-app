@@ -1,0 +1,16 @@
+.header {
+  background-color: #8ed5ff;
+  color: #000000;
+  font-size: var(--header-size);
+  border: var(--border);
+  border-radius: var(--border-radius);
+  transition: color var(--speed);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.Link {
+  text-decoration: none;
+  color: #000000;
+}

@@ -1,10 +1,9 @@
 import { Link } from "react-router-dom";
-
-
+import '../App.css';
 
 export default function Header() {
   return (
-    <div>
+    <div className="header">
       <Link to="/resume">Resume</Link>
       <Link to="/electrical-lines"> Electrical Lines Project</Link>
       <Link to="/grid-game"> Grid Game</Link>
