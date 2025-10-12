@@ -17,9 +17,12 @@ export default function MessageFinder() {
   const morsifiedHiddenMessage = useSelector(selectMorsifiedHiddenMessage);
 
   const dispatch = useDispatch();
-  const onChange = (event) => dispatch(setCarrierText({
-    text: event.target.value,
-  }));
+  const onChange = (event) => {
+    console.log('Carrier text changed:', event.target.value);
+    dispatch(setCarrierText({
+      text: event.target.value,
+    }));
+  };
 
   return (
     <>

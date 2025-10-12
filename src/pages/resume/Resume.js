@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import './Resume.css';
 import Header from '../../components/Header';
+import ProfessionalExperiences from '../../components/ProfessionalExperiences';
+import JobCard from '../../components/JobCard';
 
 export default function Resume() {
   const [isOpen, setIsOpen] = useState([false, false]); // Assuming you have two jobs
@@ -13,50 +15,23 @@ export default function Resume() {
     });
   };
 
+  const jobsList = ProfessionalExperiences;
+
+  // Sort jobsList by id in descending order
+  const sortedJobs = [...jobsList].sort((a, b) => b.id - a.id);
+
+
+
   return (
     <>
-    <Header />
+      <Header />
       <div className="professional-experience">
         <h2>Professional Experience</h2>
-        <div className="job">
-          <h3 onClick={() => toggleDropdown(0)} style={{ cursor: 'pointer' }}>
-            Job Title
-          </h3>
-          {isOpen[0] && (
-            <div>
-              <div className='job-details'>
-                <p>Location</p>
-                <p>Dates of Employment</p>
-              </div>
-              <ul>
-                <li>Responsibility or Achievement 1</li>
-                <li>Responsibility or Achievement 2</li>
-                <li>Responsibility or Achievement 3</li>
-              </ul>
-            </div>
-          )}
-        </div>
-        <div className="job">
-          <h3 onClick={() => toggleDropdown(1)} style={{ cursor: 'pointer' }}>
-            Job Title
-          </h3>
-          {isOpen[1] && (
-            <div>
-              <p>Company Name</p>
-              <p>Location</p>
-              <p>Dates of Employment</p>
-              <ul>
-                <li>Responsibility or Achievement 1</li>
-                <li>Responsibility or Achievement 2</li>
-                <li>Responsibility or Achievement 3</li>
-              </ul>
-            </div>
-          )}
-        </div>
-        {/* Add more job sections as needed */}
+        {sortedJobs.map((job, index) => (
+          <JobCard key={job.id} job={job} isOpen={isOpen[index]} toggleDropdown={() => toggleDropdown(index)} />
+        ))}
       </div>
     </>
-    
   );
 };
 
