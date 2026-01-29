@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import SkillBadge from '../ui/SkillBadge';
 
 const skills = [
@@ -38,12 +39,14 @@ export default function AboutSection() {
               <div className="absolute -top-6 -left-6 w-full h-full bg-lion-gold/20 rounded-2xl" />
               <div className="absolute -bottom-6 -right-6 w-full h-full bg-lion-blue-200/50 rounded-2xl" />
               
-              {/* Image placeholder */}
-              <div className="relative rounded-2xl overflow-hidden shadow-xl bg-gradient-to-br from-lion-blue-100 to-lion-blue-200 h-96 flex items-center justify-center">
-                <div className="text-center text-lion-blue-600">
-                  <div className="text-8xl mb-4">👨‍💻</div>
-                  <p className="text-lg font-medium">Add profile.jpg to /public/images/</p>
-                </div>
+              {/* Profile Image */}
+              <div className="relative rounded-2xl overflow-hidden shadow-xl aspect-[4/5]">
+                <Image
+                  src="/images/profile.jpg"
+                  alt="Vincent Trinh"
+                  fill
+                  className="object-cover"
+                />
               </div>
             </div>
           </div>

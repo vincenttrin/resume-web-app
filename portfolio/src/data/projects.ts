@@ -26,9 +26,9 @@ export const projects: Project[] = [
     title: 'Grid Puzzle Game',
     description: 'Interactive puzzle game featuring pathfinding algorithms and intelligent hint system.',
     longDescription: 'A challenging puzzle game where players navigate a grid to reach the goal while avoiding walls. Features include multiple difficulty levels, an undo system, and an AI-powered hint mechanism using graph search algorithms like BFS and A*.',
-    techStack: ['React', 'Redux', 'TypeScript', 'Graph Algorithms', 'CSS Modules'],
+    techStack: ['React', 'Redux', 'JavaScript', 'Graph Algorithms', 'CSS Modules'],
     featured: true,
-    liveUrl: '/games/grid',
+    liveUrl: 'https://vincenttrin.github.io/resume-web-app/grid-game',
     githubUrl: 'https://github.com/vincenttrin/resume-web-app',
   },
   {
@@ -38,7 +38,7 @@ export const projects: Project[] = [
     longDescription: 'An interactive tool that converts text to morse code and back, with a unique feature to extract hidden messages from carrier text. Uses advanced string pattern matching algorithms to decode concealed messages in plain text.',
     techStack: ['React', 'Redux', 'JavaScript', 'String Algorithms'],
     featured: true,
-    liveUrl: '/tools/morse',
+    liveUrl: 'https://vincenttrin.github.io/resume-web-app/morse-decoder',
     githubUrl: 'https://github.com/vincenttrin/resume-web-app',
   },
   {

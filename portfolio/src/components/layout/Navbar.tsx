@@ -53,7 +53,7 @@ export default function Navbar() {
               </Link>
             ))}
             <a
-              href="/resume.pdf"
+              href="/VincentTrinhResume.pdf"
               target="_blank"
               rel="noopener noreferrer"
               className="px-4 py-2 bg-lion-blue-600 text-white rounded-lg hover:bg-lion-blue-700 transition-colors font-medium"
@@ -109,7 +109,7 @@ export default function Navbar() {
               </Link>
             ))}
             <a
-              href="/resume.pdf"
+              href="/VincentTrinhResume.pdf"
               target="_blank"
               rel="noopener noreferrer"
               className="block px-4 py-2 bg-lion-blue-600 text-white rounded-lg text-center font-medium"

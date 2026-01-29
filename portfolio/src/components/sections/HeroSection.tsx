@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import CTAButton from '../ui/CTAButton';
 
 export default function HeroSection() {
@@ -63,7 +64,7 @@ export default function HeroSection() {
               <CTAButton href="#portfolio" variant="primary">
                 View My Work
               </CTAButton>
-              <CTAButton href="/resume.pdf" variant="secondary" external>
+              <CTAButton href="/VincentTrinhResume.pdf" variant="secondary" external>
                 Download Resume
               </CTAButton>
             </div>
@@ -89,12 +90,14 @@ export default function HeroSection() {
               <div className="absolute -inset-2 bg-gradient-to-br from-lion-gold to-lion-blue-500 rounded-full opacity-30" />
               
               {/* Profile image container */}
-              <div className="relative w-64 h-64 sm:w-80 sm:h-80 rounded-full overflow-hidden border-4 border-white shadow-2xl bg-gradient-to-br from-lion-blue-100 to-lion-blue-200 flex items-center justify-center">
-                {/* Placeholder - replace with your image */}
-                <div className="text-center text-lion-blue-600">
-                  <div className="text-6xl mb-2">👨‍💻</div>
-                  <p className="text-sm font-medium">Add profile.jpg</p>
-                </div>
+              <div className="relative w-64 h-64 sm:w-80 sm:h-80 rounded-full overflow-hidden border-4 border-white shadow-2xl">
+                <Image
+                  src="/images/profile.jpg"
+                  alt="Vincent Trinh"
+                  fill
+                  className="object-cover"
+                  priority
+                />
               </div>
 
               {/* Floating badge */}
