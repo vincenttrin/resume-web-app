@@ -2,6 +2,7 @@
 
 import { useState } from 'react';
 import Image from 'next/image';
+import Link from 'next/link';
 import type { Project } from '@/data/projects';
 import TechTag from './TechTag';
 
@@ -159,6 +160,28 @@ export default function ProjectCard({ project }: ProjectCardProps) {
 
               {/* Links */}
               <div className="flex gap-3">
+                {project.demoUrl && (
+                  <Link
+                    href={project.demoUrl}
+                    className="flex-1 flex items-center justify-center gap-2 px-4 py-3 bg-lion-gold text-white rounded-lg font-semibold hover:bg-lion-gold-light transition-colors"
+                  >
+                    <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth={2}
+                        d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z"
+                      />
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth={2}
+                        d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
+                      />
+                    </svg>
+                    Try Demo
+                  </Link>
+                )}
                 {project.liveUrl && (
                   <a
                     href={project.liveUrl}
@@ -194,7 +217,7 @@ export default function ProjectCard({ project }: ProjectCardProps) {
                     GitHub
                   </a>
                 )}
-                {!project.liveUrl && !project.githubUrl && (
+                {!project.liveUrl && !project.githubUrl && !project.demoUrl && (
                   <div className="flex-1 flex items-center justify-center gap-2 px-4 py-3 bg-gray-100 text-gray-500 rounded-lg font-medium">
                     <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path

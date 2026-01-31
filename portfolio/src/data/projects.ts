@@ -6,6 +6,7 @@ export interface Project {
   techStack: string[];
   thumbnail?: string;
   liveUrl?: string;
+  demoUrl?: string; // Internal demo route
   githubUrl?: string;
   featured: boolean;
 }
@@ -26,19 +27,19 @@ export const projects: Project[] = [
     title: 'Grid Puzzle Game',
     description: 'Interactive puzzle game featuring pathfinding algorithms and intelligent hint system.',
     longDescription: 'A challenging puzzle game where players navigate a grid to reach the goal while avoiding walls. Features include multiple difficulty levels, an undo system, and an AI-powered hint mechanism using graph search algorithms like BFS and A*.',
-    techStack: ['React', 'Redux', 'JavaScript', 'Graph Algorithms', 'CSS Modules'],
+    techStack: ['React', 'Redux', 'TypeScript', 'Graph Algorithms', 'Tailwind CSS'],
     featured: true,
-    liveUrl: 'https://vincenttrin.github.io/resume-web-app/grid-game',
+    demoUrl: '/demos/grid-game',
     githubUrl: 'https://github.com/vincenttrin/resume-web-app',
   },
   {
     id: 3,
     title: 'Morse Code Decoder',
     description: 'Real-time morse code translation and hidden message extraction tool.',
-    longDescription: 'An interactive tool that converts text to morse code and back, with a unique feature to extract hidden messages from carrier text. Uses advanced string pattern matching algorithms to decode concealed messages in plain text.',
-    techStack: ['React', 'Redux', 'JavaScript', 'String Algorithms'],
+    longDescription: 'An interactive tool that converts text to morse code and back, with a unique feature to extract hidden messages from carrier text. Uses advanced string pattern matching algorithms and dynamic programming to decode concealed messages in plain text.',
+    techStack: ['React', 'Redux', 'TypeScript', 'Dynamic Programming'],
     featured: true,
-    liveUrl: 'https://vincenttrin.github.io/resume-web-app/morse-decoder',
+    demoUrl: '/demos/morse-decoder',
     githubUrl: 'https://github.com/vincenttrin/resume-web-app',
   },
   {
